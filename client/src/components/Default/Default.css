@@ -1,0 +1,33 @@
+.card__body {
+  /* border: solid; */
+  flex: 1;
+  display: flex;
+}
+
+.card__btn_box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: solid;
+  margin-left: 5px;
+}
+
+.card__btn_box:first-child {
+  margin-left: 0;
+}
+
+.button {
+  margin: 0 auto;
+  text-align: center;
+  width: 250px;
+  border: solid;
+  padding: 20px 0;
+  font-size: 1.25em;
+  transition: background 100ms ease-in-out, border 100ms ease-in-out, color 100ms ease-in-out;
+}
+
+.button:hover {
+  background: #0e0e0e;
+  color: aliceblue;
+  border-color: #0e0e0e;
+}

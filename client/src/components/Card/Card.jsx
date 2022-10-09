@@ -1,19 +1,38 @@
+import Default from '../Default/Default'
+import Student from '../Student/Student'
+import Teacher from '../Teacher/Teacher'
 import './Card.css'
 
-const Card = () => {
+const Card = ({ role, setRole }) => {
+
+  if (role === 'student') {
+    return (
+		<div className='card'>
+			<div className='card__header'>
+				Enter your name:
+			</div>
+			<Student />
+		</div>
+	)
+  }
+
+  if (role === 'teacher') {
+		return (
+			<div className='card'>
+				<div className='card__header'>
+					Enter Question and Options:
+				</div>
+				<Teacher />
+			</div>
+		)
+  }
+
 	return (
 		<div className='card'>
 			<div className='card__header'>
 				Select which type of user you are:
 			</div>
-			<div className='card__body'>
-				<div className='card__btn_box'>
-					<div className='button student'>I am a Student</div>
-				</div>
-				<div className='card__btn_box'>
-					<div className='button teacher'>I am a Teacher</div>
-				</div>
-			</div>
+			<Default setRole={setRole}/>
 		</div>
 	)
 }

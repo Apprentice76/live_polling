@@ -1,0 +1,12 @@
+.student.card__body {
+  flex-flow: column;
+  border: solid;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.student input {
+  font-size: 1.25em;
+  width: 250px;
+  padding: 10px 25px;
+}
